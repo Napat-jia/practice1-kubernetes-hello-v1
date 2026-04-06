@@ -7,11 +7,7 @@ const API_KEY = process.env.API_KEY || "UNSET_KEY";
 
 const requestHandler = (request, response) => {
   console.log(`Request received!`);
-  response.end(`
- Message: ${MESSAGE}
- API Key: ${API_KEY}
- Pod Name: ${process.env.HOSTNAME}
- \n`);
+  response.end(`Hello from the Automated Pipeline!\n`);
 };
 const server = http.createServer(requestHandler);
 server.listen(3000, () => {
